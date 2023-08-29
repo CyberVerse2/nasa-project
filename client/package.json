@@ -11,10 +11,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "postbuild": "mv -f 'build/'* '../server/public'",
-
-    "build": "rm -r ../server/public/* | npm run postbuild",
-    
+    "postbuild": "mv -f build/* ../server/public",
+    "build": "rm -r ../server/public/* | react-scripts build && mv -f 'build/'* '../server/public'",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -22,7 +20,7 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ] 
+    ]
   },
   "browserslist": {
     "production": [
