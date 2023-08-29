@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "postbuild": "mv -f build/* ../server/public",
+    "postbuild": "mv -f 'build/'* '../server/public'",
 
     "build": "rm -r ../server/public/* | npm run postbuild",
     
